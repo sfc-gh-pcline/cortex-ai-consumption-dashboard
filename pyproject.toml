@@ -1,0 +1,105 @@
+[project]
+name = "streamlit-app"
+# Upper bound is deliberate: the container runtime supports Python 3.11 only, and
+# this file ships to it. Pinning here also makes a bare `uv run` pick 3.11 locally
+# instead of the newest interpreter on the machine, so local runs match production.
+requires-python = ">=3.11,<3.12"
+version = "0.3.0"
+description = ""
+# Lower bound only, as in the last working release. The container runtime installs
+# the newest Streamlit for its own process; an exact pin that differs from it makes
+# the platform rewrite the venv under that running process and mixes two versions.
+dependencies = ["streamlit[snowflake]>=1.61.0"]
+
+[tool.uv]
+# earlier versions of numba require a python version < 3.11
+constraint-dependencies = ["numba>=0.56.0"]
+
+[dependency-groups]
+# Tooling only -- deliberately not in [project.dependencies], so nothing here is
+# uploaded to the Streamlit app or installed into the container runtime.
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# The suite imports utils.* directly, so the repository root must be importable.
+pythonpath = ["."]
+addopts = "-q --strict-markers --strict-config"
+markers = [
+    "snowflake: needs a live Snowflake connection; deselect with -m 'not snowflake'",
+]
+
+[tool.ruff]
+# Container-runtime Streamlit in Snowflake supports Python 3.11 only, so lint and
+# any autofixes should target exactly that -- not the local interpreter version.
+target-version = "py311"
+# Chosen to match the code already here: at 100 the formatter rewrites the least,
+# because a longer limit makes it rejoin lines that are deliberately wrapped.
+line-length = 100
+
+[tool.ruff.lint]
+# "credits" is a site builtin (the interactive banner helper) and the central
+# domain noun of this project. Renaming it everywhere would damage readability to
+# avoid shadowing something no program calls, so it is exempted once here rather
+# than suppressed at eight call sites.
+flake8-builtins.builtins-ignorelist = ["credits"]
+# User-facing prose uses real typography: "tokens x rates" is written with the
+# multiplication sign, and headings use em dashes.
+allowed-confusables = ["×", "—"]
+select = [
+    "F",    # pyflakes: real errors -- undefined names, unused imports
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "I",    # isort: deterministic import order
+    "N",    # pep8-naming
+    "D",    # pydocstyle: this project documents every public function
+    "UP",   # pyupgrade: keep syntax current with the target version
+    "B",    # bugbear: likely bugs, not style
+    "A",    # builtins: no shadowing list, dict, id, ...
+    "C4",   # comprehensions
+    "SIM",  # simplify
+    "RET",  # return-statement hygiene
+    "ARG",  # unused arguments
+    "PTH",  # prefer pathlib over os.path
+    "BLE",  # blind except -- must be justified with a noqa
+    "TRY",  # exception antipatterns
+    "PD",   # pandas-vet: this is a pandas-heavy codebase
+    "RUF",  # ruff's own rules
+]
+ignore = [
+    # The formatter owns line length. Leaving E501 on only produces conflicts it
+    # cannot fix, such as long URLs, SQL text and markdown tables in strings.
+    "E501",
+    # Incompatible with the formatter, per ruff's own formatter-compatibility list.
+    "W191",
+    "D206",
+    # Google docstring convention: D203/D213 contradict D211/D212, which it uses.
+    "D203",
+    "D213",
+    # Streamlit reruns scripts top to bottom, so module-level code is the norm and
+    # a docstring on every page module is enough.
+    "D100",
+    # This codebase deliberately uses df.iloc[0]/df.loc[...] over .iat/.at for
+    # readability, and TRY003's "long message outside exception class" fights the
+    # single-use error strings the loaders raise.
+    "PD011",
+    "TRY003",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+# Page modules are scripts executed by st.navigation, not importable libraries:
+# they legitimately run statements at import time and define no public API.
+"app_pages/*.py" = ["D103"]
+"streamlit_app.py" = ["D103"]
+# Test classes and functions describe themselves by name, and pytest fixtures
+# arrive as arguments a test body may not reference directly.
+"tests/*.py" = ["D101", "D102", "D103", "ARG002"]
+
+[tool.ruff.format]
+docstring-code-format = true

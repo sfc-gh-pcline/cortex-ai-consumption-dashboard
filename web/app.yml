@@ -1,0 +1,71 @@
+# Customer example targets for the App Runtime dashboard. Review every identifier
+# before deployment; `make deploy:app-runtime` requires explicit target acknowledgement.
+version: 2
+
+name: AI_CONSUMPTION_WEB
+database: COST_MGMT_DB
+schema: PUBLIC
+query_warehouse: COMPUTE_WH
+
+default_target: dev
+
+targets:
+  dev:
+    # Personal database: fast iteration, cannot be granted to other roles.
+    name: AI_CONSUMPTION_WEB_DEV
+    database: USER$
+  test:
+    name: AI_CONSUMPTION_WEB_TEST
+    # A target's environment_variables replace the top-level list wholesale, so
+    # every variable is repeated here. The committed allowlist is fail-closed.
+    environment_variables:
+      - name: DASHBOARD_ADMIN_USERS
+        value: "[]"
+      - name: DASHBOARD_CONFIG_DATABASE
+        value: "COST_MGMT_DB"
+      - name: DASHBOARD_CONFIG_SCHEMA
+        value: "PUBLIC"
+  prod:
+    name: AI_CONSUMPTION_WEB
+
+# Idle suspend so an unused service does not bill a compute-pool node.
+auto_suspend_secs: 600
+min_instances: 1
+max_instances: 1
+
+# The in-process result cache assumes a single instance.
+environment_variables:
+  # JSON array of Snowflake usernames allowed to run Acceleration Settings mutations.
+  # Empty means nobody, matching the committed Streamlit allowlist.
+  - name: DASHBOARD_ADMIN_USERS
+    value: "[]"
+  # Every target reads the shared config table and aggregate tables (decision Q4),
+  # including a dev deploy whose own database is the personal USER$ database.
+  - name: DASHBOARD_CONFIG_DATABASE
+    value: "COST_MGMT_DB"
+  - name: DASHBOARD_CONFIG_SCHEMA
+    value: "PUBLIC"
+
+# Exec-form entry point. `scripts/postbuild.mjs` completes the standalone bundle
+# (static assets and public/) after `next build`.
+run:
+  command: ["node", ".next/standalone/server.js"]
+
+ignore:
+  - node_modules
+  - .env*
+  - .next
+  - .git
+  - snowflake.log
+  - tests
+  - e2e
+  - coverage
+  - playwright-report
+  - test-results
+  - README.md
+  - AGENTS.md
+  - CLAUDE.md
+  - .prettier*
+  - eslint.config.mjs
+  - playwright.config.ts
+  - vitest.config.ts

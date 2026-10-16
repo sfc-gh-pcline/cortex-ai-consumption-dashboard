@@ -1,0 +1,99 @@
+# Both schemes are defined, so Streamlit exposes a theme switcher in the app menu
+# (top-right menu > Settings > Appearance). Shared values sit under [theme];
+# per-scheme surfaces sit under [theme.light] / [theme.dark]. Shared Vega-Lite
+# charts bind their theme-specific colors to stable service names.
+#
+# Palette follows the Snowflake HTML report reference plus official brand colors:
+# Snowflake Blue #29B5E8, Dark Navy #1B2A47, White #FFFFFF.
+
+[theme]
+base = "dark"
+primaryColor = "#087EA4"
+font = "sans serif"
+showWidgetBorder = true
+showSidebarBorder = true
+baseRadius = "8px"
+buttonRadius = "8px"
+baseFontSize = 16
+baseFontWeight = 400
+headingFontSizes = ["28px", "22px", "18px", "16px", "15px", "14px"]
+headingFontWeights = [700, 600, 600, 600, 500, 500]
+linkUnderline = true
+
+# KPI card numbers (Streamlit 1.60+). Only valid under [theme]. The default is
+# 2.25rem, which crowds five cards across once each one also carries a badge, a
+# label, a sparkline and a sub-caption; 2rem at weight 600 keeps the value
+# dominant without forcing the cards taller.
+metricValueFontSize = "2rem"
+metricValueFontWeight = 600
+
+# Fallback palette for charts without a named-service encoding.
+chartCategoricalColors = [
+    "#087EA4",
+    "#7c3aed",
+    "#15803d",
+    "#b45309",
+    "#be185d",
+    "#1d4ed8",
+    "#0f766e",
+    "#c2410c",
+]
+
+# ---------------------------------------------------------------------------
+# Dark scheme
+# ---------------------------------------------------------------------------
+
+[theme.dark]
+backgroundColor = "#0d1117"
+secondaryBackgroundColor = "#161b22"
+codeBackgroundColor = "#1c2128"
+textColor = "#e2e8f0"
+linkColor = "#29B5E8"
+borderColor = "#64748b"
+dataframeBorderColor = "#64748b"
+dataframeHeaderBackgroundColor = "#1c2128"
+
+blueColor = "#29B5E8"
+violetColor = "#a78bfa"
+greenColor = "#4ade80"
+yellowColor = "#fbbf24"
+orangeColor = "#fb923c"
+redColor = "#f87171"
+
+# Navy sidebar in both schemes keeps brand presence and a consistent anchor.
+[theme.dark.sidebar]
+backgroundColor = "#1B2A47"
+secondaryBackgroundColor = "#25375C"
+codeBackgroundColor = "#16233C"
+textColor = "#e2e8f0"
+borderColor = "#94a3b8"
+linkColor = "#29B5E8"
+
+# ---------------------------------------------------------------------------
+# Light scheme
+# ---------------------------------------------------------------------------
+
+[theme.light]
+backgroundColor = "#f8fafc"
+secondaryBackgroundColor = "#ffffff"
+codeBackgroundColor = "#e8f4f8"
+textColor = "#1e293b"
+linkColor = "#075985"
+borderColor = "#64748b"
+dataframeBorderColor = "#64748b"
+dataframeHeaderBackgroundColor = "#f1f5f9"
+
+blueColor = "#0369a1"
+violetColor = "#6d28d9"
+greenColor = "#166534"
+yellowColor = "#92400e"
+orangeColor = "#9a3412"
+redColor = "#b91c1c"
+
+[theme.light.sidebar]
+backgroundColor = "#1B2A47"
+secondaryBackgroundColor = "#25375C"
+codeBackgroundColor = "#16233C"
+textColor = "#e2e8f0"
+borderColor = "#94a3b8"
+linkColor = "#29B5E8"

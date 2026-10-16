@@ -1,0 +1,158 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/*
+ * Palette from .streamlit/config.toml: Snowflake Blue #29B5E8, Dark Navy #1B2A47,
+ * primary #087EA4, with the same light and dark surfaces the Streamlit app uses.
+ * The sidebar stays navy in both schemes.
+ */
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+  --popover: #ffffff;
+  --popover-foreground: #1e293b;
+  --primary: #087ea4;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f4f8;
+  --secondary-foreground: #1e293b;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #e8f4f8;
+  --accent-foreground: #075985;
+  --destructive: #b91c1c;
+  --success: #166534;
+  --warning: #92400e;
+  --border: #cbd5e1;
+  --input: #cbd5e1;
+  --ring: #087ea4;
+  --chart-1: #087ea4;
+  --chart-2: #7c3aed;
+  --chart-3: #15803d;
+  --chart-4: #b45309;
+  --chart-5: #be185d;
+  --radius: 0.5rem;
+  --sidebar: #1b2a47;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #29b5e8;
+  --sidebar-primary-foreground: #0d1117;
+  --sidebar-accent: #25375c;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #94a3b8;
+  --sidebar-ring: #29b5e8;
+}
+
+.dark {
+  --background: #0d1117;
+  --foreground: #e2e8f0;
+  --card: #161b22;
+  --card-foreground: #e2e8f0;
+  --popover: #161b22;
+  --popover-foreground: #e2e8f0;
+  --primary: #29b5e8;
+  --primary-foreground: #0d1117;
+  --secondary: #1c2128;
+  --secondary-foreground: #e2e8f0;
+  --muted: #1c2128;
+  --muted-foreground: #94a3b8;
+  --accent: #1c2128;
+  --accent-foreground: #29b5e8;
+  --destructive: #f87171;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --border: #30363d;
+  --input: #30363d;
+  --ring: #29b5e8;
+  --chart-1: #29b5e8;
+  --chart-2: #a78bfa;
+  --chart-3: #4ade80;
+  --chart-4: #fbbf24;
+  --chart-5: #f472b6;
+  --sidebar: #1b2a47;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #29b5e8;
+  --sidebar-primary-foreground: #0d1117;
+  --sidebar-accent: #25375c;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #94a3b8;
+  --sidebar-ring: #29b5e8;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+  h1 {
+    @apply text-[28px] font-bold leading-tight;
+  }
+  h2 {
+    @apply text-[22px] font-semibold leading-tight;
+  }
+  h3 {
+    @apply text-lg font-semibold;
+  }
+  code {
+    @apply rounded bg-muted px-1 py-0.5 font-mono text-[0.85em];
+  }
+}
+
+/* Vega tooltips inherit the app theme. */
+#vg-tooltip-element {
+  @apply rounded-md border border-border bg-popover text-popover-foreground text-xs shadow-md;
+}

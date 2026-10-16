@@ -1,0 +1,6158 @@
+{
+  "periods": {
+    "requested": {
+      "start": "2026-09-13",
+      "end": "2026-09-19"
+    },
+    "current": {
+      "start": "2026-09-13",
+      "end": "2026-09-19"
+    },
+    "previous": {
+      "start": "2026-09-06",
+      "end": "2026-09-12"
+    },
+    "partialToday": null
+  },
+  "partition": [
+    {
+      "name": "grid users=[] models=[] tags=None",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [],
+      "models": [],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unscoped": [],
+        "excluded": []
+      }
+    },
+    {
+      "name": "grid users=[] models=[] tags=[]",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [],
+      "models": [],
+      "tag_users": [],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=[] models=[] tags=['Alice']",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [],
+      "models": [],
+      "tag_users": [
+        "Alice"
+      ],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          0,
+          4
+        ],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=[] models=['model'] tags=None",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [],
+      "models": [
+        "model"
+      ],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          0
+        ],
+        "unscoped": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "excluded": [
+          2
+        ]
+      }
+    },
+    {
+      "name": "grid users=[] models=['model'] tags=[]",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [],
+      "models": [
+        "model"
+      ],
+      "tag_users": [],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=[] models=['model'] tags=['Alice']",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [],
+      "models": [
+        "model"
+      ],
+      "tag_users": [
+        "Alice"
+      ],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          0
+        ],
+        "unscoped": [
+          3,
+          4
+        ],
+        "excluded": [
+          1,
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=[] models=['other'] tags=None",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [],
+      "models": [
+        "other"
+      ],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          2
+        ],
+        "unscoped": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "excluded": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "grid users=[] models=['other'] tags=[]",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [],
+      "models": [
+        "other"
+      ],
+      "tag_users": [],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=[] models=['other'] tags=['Alice']",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [],
+      "models": [
+        "other"
+      ],
+      "tag_users": [
+        "Alice"
+      ],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3,
+          4
+        ],
+        "excluded": [
+          0,
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Alice'] models=[] tags=None",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          0,
+          4
+        ],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Alice'] models=[] tags=[]",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [],
+      "tag_users": [],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Alice'] models=[] tags=['Alice']",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [],
+      "tag_users": [
+        "Alice"
+      ],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          0,
+          4
+        ],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Alice'] models=['model'] tags=None",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [
+        "model"
+      ],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          0
+        ],
+        "unscoped": [
+          3,
+          4
+        ],
+        "excluded": [
+          1,
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Alice'] models=['model'] tags=[]",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [
+        "model"
+      ],
+      "tag_users": [],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Alice'] models=['model'] tags=['Alice']",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [
+        "model"
+      ],
+      "tag_users": [
+        "Alice"
+      ],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          0
+        ],
+        "unscoped": [
+          3,
+          4
+        ],
+        "excluded": [
+          1,
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Alice'] models=['other'] tags=None",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [
+        "other"
+      ],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3,
+          4
+        ],
+        "excluded": [
+          0,
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Alice'] models=['other'] tags=[]",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [
+        "other"
+      ],
+      "tag_users": [],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Alice'] models=['other'] tags=['Alice']",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [
+        "other"
+      ],
+      "tag_users": [
+        "Alice"
+      ],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3,
+          4
+        ],
+        "excluded": [
+          0,
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Bob'] models=[] tags=None",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Bob"
+      ],
+      "models": [],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [
+          1,
+          5
+        ],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          0,
+          4
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Bob'] models=[] tags=[]",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Bob"
+      ],
+      "models": [],
+      "tag_users": [],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Bob'] models=[] tags=['Alice']",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Bob"
+      ],
+      "models": [],
+      "tag_users": [
+        "Alice"
+      ],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Bob'] models=['model'] tags=None",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Bob"
+      ],
+      "models": [
+        "model"
+      ],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          1,
+          3,
+          5
+        ],
+        "excluded": [
+          0,
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Bob'] models=['model'] tags=[]",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Bob"
+      ],
+      "models": [
+        "model"
+      ],
+      "tag_users": [],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Bob'] models=['model'] tags=['Alice']",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Bob"
+      ],
+      "models": [
+        "model"
+      ],
+      "tag_users": [
+        "Alice"
+      ],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Bob'] models=['other'] tags=None",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Bob"
+      ],
+      "models": [
+        "other"
+      ],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "excluded": [
+          0,
+          4
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Bob'] models=['other'] tags=[]",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Bob"
+      ],
+      "models": [
+        "other"
+      ],
+      "tag_users": [],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "grid users=['Bob'] models=['other'] tags=['Alice']",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": "model",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "SURFACE": "CoCo",
+          "USER_NAME": null,
+          "MODEL_NAME": "other",
+          "CREDITS": 3.0
+        },
+        {
+          "ROW_ID": 3,
+          "SURFACE": "Cortex Search",
+          "USER_NAME": null,
+          "MODEL_NAME": "model",
+          "CREDITS": 4.0
+        },
+        {
+          "ROW_ID": 4,
+          "SURFACE": "Cortex Agents",
+          "USER_NAME": "Alice",
+          "MODEL_NAME": null,
+          "CREDITS": 5.0
+        },
+        {
+          "ROW_ID": 5,
+          "SURFACE": "CoWork",
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 6.0
+        }
+      ],
+      "users": [
+        "Bob"
+      ],
+      "models": [
+        "other"
+      ],
+      "tag_users": [
+        "Alice"
+      ],
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          2,
+          3
+        ],
+        "excluded": [
+          0,
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "known mismatch wins over unknown model",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "USER_NAME": "Bob",
+          "MODEL_NAME": null,
+          "CREDITS": 7.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [
+        "model"
+      ],
+      "tag_users": null,
+      "tags": [],
+      "source": "CoCo",
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [],
+        "excluded": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "active unresolved tags are not inactive",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "USER_NAME": "Alice",
+          "CREDITS": 2.0
+        }
+      ],
+      "users": [],
+      "models": [],
+      "tag_users": null,
+      "tags": [
+        "team = engineering"
+      ],
+      "source": "CoCo",
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          0
+        ],
+        "excluded": []
+      }
+    },
+    {
+      "name": "local mismatch excludes unknown global dimension",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "USER_NAME": null,
+          "ROLE_NAME": "ADMIN",
+          "CREDITS": 2.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [],
+      "tag_users": null,
+      "tags": [],
+      "source": "CoCo",
+      "page_values": {
+        "ROLE_NAME": [
+          "ANALYST"
+        ]
+      },
+      "expected": {
+        "matched": [],
+        "unscoped": [],
+        "excluded": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "warehouse source overrides classified surface capability",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "SURFACE": "CoCo",
+          "USER_NAME": "Alice",
+          "CREDITS": 2.0
+        }
+      ],
+      "users": [
+        "Alice"
+      ],
+      "models": [],
+      "tag_users": null,
+      "tags": [],
+      "source": "Warehouse Attribution",
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          0
+        ],
+        "excluded": []
+      }
+    },
+    {
+      "name": "missing and unknown values are not explicit matches",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "USER_NAME": null,
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "USER_NAME": "(unknown)",
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "USER_NAME": "",
+          "CREDITS": 3.0
+        }
+      ],
+      "users": [
+        "(unknown)"
+      ],
+      "models": [],
+      "tag_users": null,
+      "tags": [],
+      "source": "CoCo",
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [
+          0,
+          1,
+          2
+        ],
+        "excluded": []
+      }
+    },
+    {
+      "name": "model filter for a model absent from the page",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "USER_NAME": "ALICE",
+          "MODEL_NAME": "claude-opus-4-6",
+          "CREDITS": 1.0
+        }
+      ],
+      "users": [],
+      "models": [
+        "claude-haiku-4-5"
+      ],
+      "tag_users": null,
+      "tags": [],
+      "source": null,
+      "page_values": {},
+      "expected": {
+        "matched": [],
+        "unscoped": [],
+        "excluded": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "page values on a supported column",
+      "frame": [
+        {
+          "ROW_ID": 0,
+          "USER_NAME": "A",
+          "ROLE_NAME": "X",
+          "CREDITS": 1.0
+        },
+        {
+          "ROW_ID": 1,
+          "USER_NAME": "B",
+          "ROLE_NAME": "Y",
+          "CREDITS": 2.0
+        },
+        {
+          "ROW_ID": 2,
+          "USER_NAME": "C",
+          "ROLE_NAME": null,
+          "CREDITS": 3.0
+        }
+      ],
+      "users": [],
+      "models": [],
+      "tag_users": null,
+      "tags": [],
+      "source": "CoCo",
+      "page_values": {
+        "ROLE_NAME": [
+          "X"
+        ]
+      },
+      "expected": {
+        "matched": [
+          0
+        ],
+        "unscoped": [
+          2
+        ],
+        "excluded": [
+          1
+        ]
+      }
+    }
+  ],
+  "by_dimension": [
+    {
+      "name": "facts by surface",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "column": "SURFACE",
+      "label_col": "SURFACE",
+      "metrics": null,
+      "expected": {
+        "columns": [
+          "SURFACE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS",
+          "USERS"
+        ],
+        "rows": [
+          {
+            "SURFACE": "CoCo",
+            "CREDITS": 4.0,
+            "TOKENS": 40,
+            "CALLS": 3,
+            "USERS": 1
+          },
+          {
+            "SURFACE": "CoWork",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1,
+            "USERS": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "without user column",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "column": "SURFACE",
+      "label_col": "SURFACE",
+      "metrics": null,
+      "expected": {
+        "columns": [
+          "SURFACE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "SURFACE": "CoCo",
+            "CREDITS": 4.0,
+            "TOKENS": 40,
+            "CALLS": 3
+          },
+          {
+            "SURFACE": "CoWork",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "without tokens",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "CALLS": 2
+          }
+        ]
+      },
+      "column": "SURFACE",
+      "label_col": "SURFACE",
+      "metrics": null,
+      "expected": {
+        "columns": [
+          "SURFACE",
+          "CREDITS",
+          "CALLS",
+          "USERS"
+        ],
+        "rows": [
+          {
+            "SURFACE": "CoCo",
+            "CREDITS": 4.0,
+            "CALLS": 3,
+            "USERS": 1
+          },
+          {
+            "SURFACE": "CoWork",
+            "CREDITS": 2.0,
+            "CALLS": 1,
+            "USERS": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "explicit warehouse metrics",
+      "frame": {
+        "columns": [
+          "SURFACE",
+          "WAREHOUSE_CREDITS",
+          "COMPUTE_CREDITS"
+        ],
+        "rows": [
+          {
+            "SURFACE": "CoCo",
+            "WAREHOUSE_CREDITS": 1.5,
+            "COMPUTE_CREDITS": 1.5
+          },
+          {
+            "SURFACE": "CoCo",
+            "WAREHOUSE_CREDITS": 2.5,
+            "COMPUTE_CREDITS": 2.5
+          },
+          {
+            "SURFACE": "CoWork",
+            "WAREHOUSE_CREDITS": 0.5,
+            "COMPUTE_CREDITS": 0.5
+          }
+        ]
+      },
+      "column": "SURFACE",
+      "label_col": "SURFACE",
+      "metrics": [
+        "WAREHOUSE_CREDITS",
+        "COMPUTE_CREDITS"
+      ],
+      "expected": {
+        "columns": [
+          "SURFACE",
+          "WAREHOUSE_CREDITS",
+          "COMPUTE_CREDITS"
+        ],
+        "rows": [
+          {
+            "SURFACE": "CoCo",
+            "WAREHOUSE_CREDITS": 4.0,
+            "COMPUTE_CREDITS": 4.0
+          },
+          {
+            "SURFACE": "CoWork",
+            "WAREHOUSE_CREDITS": 0.5,
+            "COMPUTE_CREDITS": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "null relabelled unknown",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": null,
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "column": "SURFACE",
+      "label_col": "SURFACE",
+      "metrics": null,
+      "expected": {
+        "columns": [
+          "SURFACE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS",
+          "USERS"
+        ],
+        "rows": [
+          {
+            "SURFACE": "CoCo",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2,
+            "USERS": 1
+          },
+          {
+            "SURFACE": "CoWork",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1,
+            "USERS": 1
+          },
+          {
+            "SURFACE": "(unknown)",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1,
+            "USERS": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "empty frame",
+      "frame": {
+        "columns": [],
+        "rows": []
+      },
+      "column": "SURFACE",
+      "label_col": "SURFACE",
+      "metrics": null,
+      "expected": {
+        "columns": [
+          "SURFACE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "name": "missing group column",
+      "frame": {
+        "columns": [
+          "OTHER"
+        ],
+        "rows": [
+          {
+            "OTHER": 1
+          }
+        ]
+      },
+      "column": "SURFACE",
+      "label_col": "SURFACE",
+      "metrics": null,
+      "expected": {
+        "columns": [
+          "SURFACE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "name": "no metric present",
+      "frame": {
+        "columns": [
+          "SURFACE",
+          "SOMETHING_ELSE"
+        ],
+        "rows": [
+          {
+            "SURFACE": "CoCo",
+            "SOMETHING_ELSE": 1
+          }
+        ]
+      },
+      "column": "SURFACE",
+      "label_col": "SURFACE",
+      "metrics": null,
+      "expected": {
+        "columns": [
+          "SURFACE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "name": "default label column",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "column": "SURFACE",
+      "label_col": "DIMENSION",
+      "metrics": null,
+      "expected": {
+        "columns": [
+          "DIMENSION",
+          "CREDITS",
+          "TOKENS",
+          "CALLS",
+          "USERS"
+        ],
+        "rows": [
+          {
+            "DIMENSION": "CoCo",
+            "CREDITS": 4.0,
+            "TOKENS": 40,
+            "CALLS": 3,
+            "USERS": 1
+          },
+          {
+            "DIMENSION": "CoWork",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1,
+            "USERS": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "by user",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "column": "USER_NAME",
+      "label_col": "USER_NAME",
+      "metrics": null,
+      "expected": {
+        "columns": [
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS",
+          "USERS"
+        ],
+        "rows": [
+          {
+            "USER_NAME": "ALICE",
+            "CREDITS": 4.0,
+            "TOKENS": 40,
+            "CALLS": 3,
+            "USERS": 1
+          },
+          {
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1,
+            "USERS": 1
+          }
+        ]
+      }
+    }
+  ],
+  "compare": [
+    {
+      "name": "constant spend",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 14.0,
+        "deltaPercent": 0.0,
+        "state": "comparable",
+        "reason": null
+      }
+    },
+    {
+      "name": "both zero",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 0.0,
+        "previous": 0.0,
+        "deltaPercent": 0.0,
+        "state": "both_zero",
+        "reason": "No change"
+      }
+    },
+    {
+      "name": "zero baseline",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 7.0,
+        "previous": 0.0,
+        "deltaPercent": null,
+        "state": "zero_baseline",
+        "reason": "New usage"
+      }
+    },
+    {
+      "name": "to zero",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 0.0,
+        "previous": 7.0,
+        "deltaPercent": -100.0,
+        "state": "comparable",
+        "reason": null
+      }
+    },
+    {
+      "name": "unknown component",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        },
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "unknown",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 14.0,
+        "deltaPercent": null,
+        "state": "incomplete",
+        "reason": "Source coverage does not verify both complete periods."
+      }
+    },
+    {
+      "name": "incomplete component",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        },
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-18"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 14.0,
+        "deltaPercent": null,
+        "state": "incomplete",
+        "reason": "Source coverage does not verify both complete periods."
+      }
+    },
+    {
+      "name": "retention component",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        },
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2026-09-10",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 14.0,
+        "deltaPercent": null,
+        "state": "incomplete",
+        "reason": "Source coverage does not verify both complete periods."
+      }
+    },
+    {
+      "name": "unavailable component",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        },
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "unavailable",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 7.0,
+        "deltaPercent": null,
+        "state": "unavailable",
+        "reason": "A required source is unavailable; observed values exclude it."
+      }
+    },
+    {
+      "name": "missing rate",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME",
+          "IS_UNRATED"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 1
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 14.0,
+        "deltaPercent": null,
+        "state": "incomplete",
+        "reason": "Credit change is unavailable because one or both periods contain inference usage without an observed model rate."
+      }
+    },
+    {
+      "name": "partial token type rate",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME",
+          "IS_UNRATED",
+          "RATE_INCOMPLETE"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 1,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": true
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 1,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 1,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 1,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 1,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 1,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 1,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2,
+            "USER_NAME": "Alice",
+            "IS_UNRATED": 0,
+            "RATE_INCOMPLETE": false
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 7.0,
+        "deltaPercent": null,
+        "state": "incomplete",
+        "reason": "Credit change is unavailable because one or both periods lack pricing details for some inference tokens (model rates, token types, or their breakdown)."
+      }
+    },
+    {
+      "name": "today excluded",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-20",
+            "CREDITS": 999.0,
+            "USER_NAME": null
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 14.0,
+        "deltaPercent": 0.0,
+        "state": "comparable",
+        "reason": null
+      }
+    },
+    {
+      "name": "no coverage",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 14.0,
+        "deltaPercent": null,
+        "state": "incomplete",
+        "reason": "Source coverage does not verify both complete periods."
+      }
+    },
+    {
+      "name": "metric absent",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "TOKENS",
+      "expected": {
+        "current": 0.0,
+        "previous": 0.0,
+        "deltaPercent": null,
+        "state": "incomplete",
+        "reason": "The metric is unavailable."
+      }
+    },
+    {
+      "name": "warehouse metric",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "WAREHOUSE_CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-06",
+            "WAREHOUSE_CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-07",
+            "WAREHOUSE_CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-08",
+            "WAREHOUSE_CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-09",
+            "WAREHOUSE_CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-10",
+            "WAREHOUSE_CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-11",
+            "WAREHOUSE_CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-12",
+            "WAREHOUSE_CREDITS": 1,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "WAREHOUSE_CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "WAREHOUSE_CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "WAREHOUSE_CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "WAREHOUSE_CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "WAREHOUSE_CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "WAREHOUSE_CREDITS": 2,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "WAREHOUSE_CREDITS": 2,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "coverages": [
+        {
+          "dependency": "Warehouse Attribution",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "WAREHOUSE_CREDITS",
+      "expected": {
+        "current": 14.0,
+        "previous": 7.0,
+        "deltaPercent": 100.0,
+        "state": "comparable",
+        "reason": null
+      }
+    },
+    {
+      "name": "frame unavailable",
+      "frame": null,
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": {
+        "current": null,
+        "previous": null,
+        "deltaPercent": null,
+        "state": "unavailable",
+        "reason": "A required source is unavailable."
+      }
+    }
+  ],
+  "calendar": [
+    {
+      "name": "partial coverage",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "window": {
+        "start": "2026-09-13",
+        "end": "2026-09-19"
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "partial",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-18"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": [
+        {
+          "USAGE_DATE": "2026-09-13",
+          "CREDITS": 2.0
+        },
+        {
+          "USAGE_DATE": "2026-09-14",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-15",
+          "CREDITS": 2.0
+        },
+        {
+          "USAGE_DATE": "2026-09-16",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-17",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-18",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-19",
+          "CREDITS": null
+        }
+      ]
+    },
+    {
+      "name": "no coverage",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "window": {
+        "start": "2026-09-13",
+        "end": "2026-09-19"
+      },
+      "coverages": [],
+      "value_col": "CREDITS",
+      "expected": [
+        {
+          "USAGE_DATE": "2026-09-13",
+          "CREDITS": 2.0
+        },
+        {
+          "USAGE_DATE": "2026-09-14",
+          "CREDITS": null
+        },
+        {
+          "USAGE_DATE": "2026-09-15",
+          "CREDITS": 2.0
+        },
+        {
+          "USAGE_DATE": "2026-09-16",
+          "CREDITS": null
+        },
+        {
+          "USAGE_DATE": "2026-09-17",
+          "CREDITS": null
+        },
+        {
+          "USAGE_DATE": "2026-09-18",
+          "CREDITS": null
+        },
+        {
+          "USAGE_DATE": "2026-09-19",
+          "CREDITS": null
+        }
+      ]
+    },
+    {
+      "name": "full coverage",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "window": {
+        "start": "2026-09-13",
+        "end": "2026-09-19"
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": [
+        {
+          "USAGE_DATE": "2026-09-13",
+          "CREDITS": 2.0
+        },
+        {
+          "USAGE_DATE": "2026-09-14",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-15",
+          "CREDITS": 2.0
+        },
+        {
+          "USAGE_DATE": "2026-09-16",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-17",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-18",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-19",
+          "CREDITS": 0.0
+        }
+      ]
+    },
+    {
+      "name": "null observation stays null",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": null,
+            "USER_NAME": "Alice"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice"
+          }
+        ]
+      },
+      "window": {
+        "start": "2026-09-13",
+        "end": "2026-09-19"
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": [
+        {
+          "USAGE_DATE": "2026-09-13",
+          "CREDITS": null
+        },
+        {
+          "USAGE_DATE": "2026-09-14",
+          "CREDITS": 2.0
+        },
+        {
+          "USAGE_DATE": "2026-09-15",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-16",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-17",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-18",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-19",
+          "CREDITS": 0.0
+        }
+      ]
+    },
+    {
+      "name": "empty frame",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME"
+        ],
+        "rows": []
+      },
+      "window": {
+        "start": "2026-09-13",
+        "end": "2026-09-19"
+      },
+      "coverages": [
+        {
+          "dependency": "CoCo",
+          "actualSource": "direct",
+          "fetchedAt": "2026-09-20T08:00:00+00:00",
+          "requested": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "served": {
+            "start": "2026-09-06",
+            "end": "2026-09-19"
+          },
+          "retentionStart": "2025-09-21",
+          "latencyHours": null,
+          "snapshotAt": null,
+          "state": "available",
+          "reason": null,
+          "readStartedAt": null,
+          "completeThrough": "2026-09-19"
+        }
+      ],
+      "value_col": "CREDITS",
+      "expected": [
+        {
+          "USAGE_DATE": "2026-09-13",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-14",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-15",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-16",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-17",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-18",
+          "CREDITS": 0.0
+        },
+        {
+          "USAGE_DATE": "2026-09-19",
+          "CREDITS": 0.0
+        }
+      ]
+    }
+  ],
+  "daily": [
+    {
+      "name": "plain grouped by surface",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "color_col": "SURFACE",
+      "context": null,
+      "expected": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "expected_trend": null
+    },
+    {
+      "name": "plain ungrouped",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "color_col": null,
+      "context": null,
+      "expected": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "expected_trend": null
+    },
+    {
+      "name": "gaps without coverage",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "TOKENS": 10,
+            "CALLS": 1
+          }
+        ]
+      },
+      "color_col": null,
+      "context": {
+        "displayWindow": {
+          "start": "2026-09-13",
+          "end": "2026-09-19"
+        },
+        "coverages": [],
+        "seriesValues": {}
+      },
+      "expected": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          }
+        ]
+      },
+      "expected_trend": null
+    },
+    {
+      "name": "gaps with coverage",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "TOKENS": 10,
+            "CALLS": 1
+          }
+        ]
+      },
+      "color_col": null,
+      "context": {
+        "displayWindow": {
+          "start": "2026-09-13",
+          "end": "2026-09-19"
+        },
+        "coverages": [
+          {
+            "dependency": "CoCo",
+            "actualSource": "direct",
+            "fetchedAt": "2026-09-20T08:00:00+00:00",
+            "requested": {
+              "start": "2026-09-06",
+              "end": "2026-09-19"
+            },
+            "served": {
+              "start": "2026-09-06",
+              "end": "2026-09-19"
+            },
+            "retentionStart": "2025-09-21",
+            "latencyHours": null,
+            "snapshotAt": null,
+            "state": "available",
+            "reason": null,
+            "readStartedAt": null,
+            "completeThrough": "2026-09-19"
+          }
+        ],
+        "seriesValues": {}
+      },
+      "expected": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0
+          }
+        ]
+      },
+      "expected_trend": [
+        2.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "grouped by surface with per-source evidence",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME",
+          "SURFACE",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "SURFACE": "Cortex Search",
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "SURFACE": "Cortex Search",
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "SURFACE": "Cortex Search",
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "SURFACE": "Cortex Search",
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "SURFACE": "Cortex Search",
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "SURFACE": "Cortex Search",
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "USER_NAME": "Alice",
+            "SURFACE": "Cortex Search",
+            "TOKENS": 10,
+            "CALLS": 1
+          }
+        ]
+      },
+      "color_col": "SURFACE",
+      "context": {
+        "displayWindow": {
+          "start": "2026-09-13",
+          "end": "2026-09-19"
+        },
+        "coverages": [
+          {
+            "dependency": "CoCo",
+            "actualSource": "direct",
+            "fetchedAt": "2026-09-20T08:00:00+00:00",
+            "requested": {
+              "start": "2026-09-06",
+              "end": "2026-09-19"
+            },
+            "served": {
+              "start": "2026-09-06",
+              "end": "2026-09-19"
+            },
+            "retentionStart": "2025-09-21",
+            "latencyHours": null,
+            "snapshotAt": null,
+            "state": "available",
+            "reason": null,
+            "readStartedAt": null,
+            "completeThrough": "2026-09-19"
+          },
+          {
+            "dependency": "Cortex Search — Daily",
+            "actualSource": "direct",
+            "fetchedAt": "2026-09-20T08:00:00+00:00",
+            "requested": {
+              "start": "2026-09-06",
+              "end": "2026-09-19"
+            },
+            "served": {
+              "start": "2026-09-06",
+              "end": "2026-09-19"
+            },
+            "retentionStart": "2025-09-21",
+            "latencyHours": null,
+            "snapshotAt": null,
+            "state": "unknown",
+            "reason": null,
+            "readStartedAt": null,
+            "completeThrough": "2026-09-19"
+          }
+        ],
+        "seriesValues": {
+          "SURFACE": [
+            "CoCo",
+            "Cortex Search"
+          ]
+        }
+      },
+      "expected": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS",
+          "SURFACE"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0,
+            "SURFACE": "CoCo"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0,
+            "SURFACE": "CoCo"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0,
+            "SURFACE": "CoCo"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0,
+            "SURFACE": "CoCo"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0,
+            "SURFACE": "CoCo"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0,
+            "SURFACE": "CoCo"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 0.0,
+            "TOKENS": 0.0,
+            "CALLS": 0.0,
+            "SURFACE": "CoCo"
+          },
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0,
+            "SURFACE": "Cortex Search"
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0,
+            "SURFACE": "Cortex Search"
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0,
+            "SURFACE": "Cortex Search"
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0,
+            "SURFACE": "Cortex Search"
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0,
+            "SURFACE": "Cortex Search"
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0,
+            "SURFACE": "Cortex Search"
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": 2.0,
+            "TOKENS": 10.0,
+            "CALLS": 1.0,
+            "SURFACE": "Cortex Search"
+          }
+        ]
+      },
+      "expected_trend": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    },
+    {
+      "name": "empty grouped calendar",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "USER_NAME",
+          "SUB_SURFACE",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": []
+      },
+      "color_col": "SUB_SURFACE",
+      "context": {
+        "displayWindow": {
+          "start": "2026-09-13",
+          "end": "2026-09-19"
+        },
+        "coverages": [],
+        "seriesValues": {}
+      },
+      "expected": {
+        "columns": [
+          "USAGE_DATE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-09-13",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-14",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-15",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-16",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-17",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-18",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          },
+          {
+            "USAGE_DATE": "2026-09-19",
+            "CREDITS": null,
+            "TOKENS": null,
+            "CALLS": null
+          }
+        ]
+      },
+      "expected_trend": null
+    }
+  ],
+  "totals": [
+    {
+      "name": "facts",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "expected": {
+        "CREDITS": 6.0,
+        "TOKENS": 60,
+        "CALLS": 4,
+        "USERS": 2,
+        "ACTIVE_DAYS": 2
+      }
+    },
+    {
+      "name": "no users",
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "expected": {
+        "CREDITS": 6.0,
+        "TOKENS": 60,
+        "CALLS": 4,
+        "USERS": 0,
+        "ACTIVE_DAYS": 2
+      }
+    },
+    {
+      "name": "empty",
+      "frame": {
+        "columns": [],
+        "rows": []
+      },
+      "expected": {
+        "CREDITS": 0.0,
+        "TOKENS": 0,
+        "CALLS": 0,
+        "USERS": 0,
+        "ACTIVE_DAYS": 0
+      }
+    }
+  ],
+  "options": [
+    {
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "column": "USER_NAME",
+      "expected": [
+        "ALICE",
+        "BOB"
+      ]
+    },
+    {
+      "frame": {
+        "columns": [
+          "USAGE_DATE",
+          "SURFACE",
+          "USER_NAME",
+          "CREDITS",
+          "TOKENS",
+          "CALLS"
+        ],
+        "rows": [
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 1.0,
+            "TOKENS": 10,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-01",
+            "SURFACE": "CoWork",
+            "USER_NAME": "BOB",
+            "CREDITS": 2.0,
+            "TOKENS": 20,
+            "CALLS": 1
+          },
+          {
+            "USAGE_DATE": "2026-08-02",
+            "SURFACE": "CoCo",
+            "USER_NAME": "ALICE",
+            "CREDITS": 3.0,
+            "TOKENS": 30,
+            "CALLS": 2
+          }
+        ]
+      },
+      "column": "NOPE",
+      "expected": []
+    }
+  ],
+  "token_mix": [
+    {
+      "frame": {
+        "columns": [
+          "TOK_INPUT",
+          "TOK_OUTPUT",
+          "TOK_CACHE_READ_INPUT",
+          "TOK_CACHE_WRITE_INPUT"
+        ],
+        "rows": [
+          {
+            "TOK_INPUT": 10,
+            "TOK_OUTPUT": 3,
+            "TOK_CACHE_READ_INPUT": 0,
+            "TOK_CACHE_WRITE_INPUT": 1
+          },
+          {
+            "TOK_INPUT": 5,
+            "TOK_OUTPUT": 0,
+            "TOK_CACHE_READ_INPUT": 0,
+            "TOK_CACHE_WRITE_INPUT": 1
+          }
+        ]
+      },
+      "expected": {
+        "columns": [
+          "DIMENSION",
+          "TOKENS"
+        ],
+        "rows": [
+          {
+            "DIMENSION": "Input",
+            "TOKENS": 15.0
+          },
+          {
+            "DIMENSION": "Output",
+            "TOKENS": 3.0
+          },
+          {
+            "DIMENSION": "Cache write",
+            "TOKENS": 2.0
+          }
+        ]
+      }
+    },
+    {
+      "frame": {
+        "columns": [],
+        "rows": []
+      },
+      "expected": {
+        "columns": [
+          "DIMENSION",
+          "TOKENS"
+        ],
+        "rows": []
+      }
+    }
+  ],
+  "tag_label_options": {
+    "tags": {
+      "columns": [
+        "TAG_NAME",
+        "TAG_VALUE",
+        "TAG_LABEL",
+        "USER_NAME"
+      ],
+      "rows": [
+        {
+          "TAG_NAME": "team",
+          "TAG_VALUE": "eng",
+          "TAG_LABEL": "team = eng",
+          "USER_NAME": "ALICE"
+        },
+        {
+          "TAG_NAME": "team",
+          "TAG_VALUE": "eng",
+          "TAG_LABEL": "team = eng",
+          "USER_NAME": "CAROL"
+        },
+        {
+          "TAG_NAME": "cost_center",
+          "TAG_VALUE": "42",
+          "TAG_LABEL": "cost_center = 42",
+          "USER_NAME": "CAROL"
+        }
+      ]
+    },
+    "expected": [
+      "cost_center = 42",
+      "team = eng"
+    ]
+  },
+  "users_for_tags": {
+    "tags": {
+      "columns": [
+        "TAG_NAME",
+        "TAG_VALUE",
+        "TAG_LABEL",
+        "USER_NAME"
+      ],
+      "rows": [
+        {
+          "TAG_NAME": "team",
+          "TAG_VALUE": "eng",
+          "TAG_LABEL": "team = eng",
+          "USER_NAME": "ALICE"
+        },
+        {
+          "TAG_NAME": "team",
+          "TAG_VALUE": "eng",
+          "TAG_LABEL": "team = eng",
+          "USER_NAME": "CAROL"
+        },
+        {
+          "TAG_NAME": "cost_center",
+          "TAG_VALUE": "42",
+          "TAG_LABEL": "cost_center = 42",
+          "USER_NAME": "CAROL"
+        }
+      ]
+    },
+    "selected": [
+      "team = eng"
+    ],
+    "expected": [
+      "ALICE",
+      "CAROL"
+    ]
+  },
+  "by_user_tag": {
+    "frame": {
+      "columns": [
+        "USAGE_DATE",
+        "SURFACE",
+        "USER_NAME",
+        "CREDITS",
+        "TOKENS",
+        "CALLS"
+      ],
+      "rows": [
+        {
+          "USAGE_DATE": "2026-08-01",
+          "SURFACE": "CoCo",
+          "USER_NAME": "ALICE",
+          "CREDITS": 1.0,
+          "TOKENS": 10,
+          "CALLS": 1
+        },
+        {
+          "USAGE_DATE": "2026-08-01",
+          "SURFACE": "CoWork",
+          "USER_NAME": "BOB",
+          "CREDITS": 2.0,
+          "TOKENS": 20,
+          "CALLS": 1
+        },
+        {
+          "USAGE_DATE": "2026-08-02",
+          "SURFACE": "CoCo",
+          "USER_NAME": "ALICE",
+          "CREDITS": 3.0,
+          "TOKENS": 30,
+          "CALLS": 2
+        }
+      ]
+    },
+    "tags": {
+      "columns": [
+        "TAG_NAME",
+        "TAG_VALUE",
+        "TAG_LABEL",
+        "USER_NAME"
+      ],
+      "rows": [
+        {
+          "TAG_NAME": "team",
+          "TAG_VALUE": "eng",
+          "TAG_LABEL": "team = eng",
+          "USER_NAME": "ALICE"
+        },
+        {
+          "TAG_NAME": "team",
+          "TAG_VALUE": "eng",
+          "TAG_LABEL": "team = eng",
+          "USER_NAME": "CAROL"
+        },
+        {
+          "TAG_NAME": "cost_center",
+          "TAG_VALUE": "42",
+          "TAG_LABEL": "cost_center = 42",
+          "USER_NAME": "CAROL"
+        }
+      ]
+    },
+    "expected": {
+      "columns": [
+        "TAG_LABEL",
+        "CREDITS",
+        "TOKENS",
+        "CALLS",
+        "USERS"
+      ],
+      "rows": [
+        {
+          "TAG_LABEL": "team = eng",
+          "CREDITS": 4.0,
+          "TOKENS": 40,
+          "CALLS": 3,
+          "USERS": 1
+        },
+        {
+          "TAG_LABEL": "(untagged)",
+          "CREDITS": 2.0,
+          "TOKENS": 20,
+          "CALLS": 1,
+          "USERS": 1
+        }
+      ]
+    }
+  },
+  "by_agent_tag": {
+    "frame": {
+      "columns": [
+        "USER_NAME",
+        "AGENT_TAG_LABELS",
+        "CREDITS",
+        "TOKENS",
+        "CALLS"
+      ],
+      "rows": [
+        {
+          "USER_NAME": "A",
+          "AGENT_TAG_LABELS": "env = prod|team = x",
+          "CREDITS": 1.0,
+          "TOKENS": 1,
+          "CALLS": 1
+        },
+        {
+          "USER_NAME": "B",
+          "AGENT_TAG_LABELS": "",
+          "CREDITS": 2.0,
+          "TOKENS": 2,
+          "CALLS": 1
+        },
+        {
+          "USER_NAME": "C",
+          "AGENT_TAG_LABELS": null,
+          "CREDITS": 4.0,
+          "TOKENS": 4,
+          "CALLS": 1
+        }
+      ]
+    },
+    "expected": {
+      "columns": [
+        "TAG_LABEL",
+        "CREDITS",
+        "TOKENS",
+        "CALLS",
+        "USERS"
+      ],
+      "rows": [
+        {
+          "TAG_LABEL": "(untagged)",
+          "CREDITS": 6.0,
+          "TOKENS": 6,
+          "CALLS": 2,
+          "USERS": 2
+        },
+        {
+          "TAG_LABEL": "env = prod",
+          "CREDITS": 1.0,
+          "TOKENS": 1,
+          "CALLS": 1,
+          "USERS": 1
+        },
+        {
+          "TAG_LABEL": "team = x",
+          "CREDITS": 1.0,
+          "TOKENS": 1,
+          "CALLS": 1,
+          "USERS": 1
+        }
+      ]
+    }
+  },
+  "warehouse_surface": [
+    {
+      "frame": {
+        "columns": [
+          "SURFACE",
+          "TIER",
+          "WAREHOUSE_CREDITS"
+        ],
+        "rows": [
+          {
+            "SURFACE": "CoCo",
+            "TIER": "per_request",
+            "WAREHOUSE_CREDITS": 1.5
+          },
+          {
+            "SURFACE": "CoCo",
+            "TIER": "surface",
+            "WAREHOUSE_CREDITS": 0.5
+          },
+          {
+            "SURFACE": "CoWork",
+            "TIER": "per_request",
+            "WAREHOUSE_CREDITS": 2.0
+          }
+        ]
+      },
+      "surface": "CoCo",
+      "expected": {
+        "PER_REQUEST": 1.5,
+        "SURFACE_ONLY": 0.5,
+        "TOTAL": 2.0
+      }
+    },
+    {
+      "frame": {
+        "columns": [
+          "SURFACE",
+          "TIER",
+          "WAREHOUSE_CREDITS"
+        ],
+        "rows": [
+          {
+            "SURFACE": "CoCo",
+            "TIER": "per_request",
+            "WAREHOUSE_CREDITS": 1.5
+          },
+          {
+            "SURFACE": "CoCo",
+            "TIER": "surface",
+            "WAREHOUSE_CREDITS": 0.5
+          },
+          {
+            "SURFACE": "CoWork",
+            "TIER": "per_request",
+            "WAREHOUSE_CREDITS": 2.0
+          }
+        ]
+      },
+      "surface": "Cortex Agents",
+      "expected": {
+        "PER_REQUEST": 0.0,
+        "SURFACE_ONLY": 0.0,
+        "TOTAL": 0.0
+      }
+    }
+  ],
+  "relative": {
+    "current": {
+      "columns": [
+        "USAGE_DATE",
+        "CREDITS"
+      ],
+      "rows": [
+        {
+          "USAGE_DATE": "2026-09-19",
+          "CREDITS": 2.0
+        },
+        {
+          "USAGE_DATE": "2026-09-18",
+          "CREDITS": 1.0
+        },
+        {
+          "USAGE_DATE": "2026-09-18",
+          "CREDITS": null
+        }
+      ]
+    },
+    "previous": {
+      "columns": [
+        "USAGE_DATE",
+        "CREDITS"
+      ],
+      "rows": [
+        {
+          "USAGE_DATE": "2026-09-16",
+          "CREDITS": 3.0
+        },
+        {
+          "USAGE_DATE": "2026-09-17",
+          "CREDITS": 4.0
+        }
+      ]
+    },
+    "expected": {
+      "columns": [
+        "USAGE_DATE",
+        "CREDITS",
+        "Day",
+        "Period"
+      ],
+      "rows": [
+        {
+          "USAGE_DATE": "2026-09-18",
+          "CREDITS": null,
+          "Day": 1,
+          "Period": "Current"
+        },
+        {
+          "USAGE_DATE": "2026-09-19",
+          "CREDITS": 2.0,
+          "Day": 2,
+          "Period": "Current"
+        },
+        {
+          "USAGE_DATE": "2026-09-16",
+          "CREDITS": 3.0,
+          "Day": 1,
+          "Period": "Previous"
+        },
+        {
+          "USAGE_DATE": "2026-09-17",
+          "CREDITS": 4.0,
+          "Day": 2,
+          "Period": "Previous"
+        }
+      ]
+    }
+  },
+  "trend_delta": {
+    "comparison": {
+      "current": 14.0,
+      "previous": 7.0,
+      "deltaPercent": 100.0,
+      "state": "comparable",
+      "reason": null
+    },
+    "expected": "+100.0% (+7.0000)"
+  },
+  "leader": {
+    "frame": {
+      "columns": [
+        "SURFACE",
+        "CREDITS",
+        "TOKENS",
+        "CALLS",
+        "USERS"
+      ],
+      "rows": [
+        {
+          "SURFACE": "CoCo",
+          "CREDITS": 4.0,
+          "TOKENS": 40,
+          "CALLS": 3,
+          "USERS": 1
+        },
+        {
+          "SURFACE": "CoWork",
+          "CREDITS": 2.0,
+          "TOKENS": 20,
+          "CALLS": 1,
+          "USERS": 1
+        }
+      ]
+    },
+    "total": 6.0,
+    "expected": {
+      "label": "CoCo",
+      "share": 0.6666666666666666
+    }
+  },
+  "format": {
+    "fmt_int": [
+      [
+        0,
+        "0"
+      ],
+      [
+        1,
+        "1"
+      ],
+      [
+        999,
+        "999"
+      ],
+      [
+        1000,
+        "1,000"
+      ],
+      [
+        1234567,
+        "1,234,567"
+      ],
+      [
+        12.9,
+        "12"
+      ],
+      [
+        -5,
+        "-5"
+      ],
+      [
+        null,
+        "Unavailable"
+      ],
+      [
+        null,
+        "Unavailable"
+      ]
+    ],
+    "fmt_credits": [
+      [
+        0,
+        2,
+        "0.00"
+      ],
+      [
+        0.004,
+        2,
+        "<0.01"
+      ],
+      [
+        0.01,
+        2,
+        "0.01"
+      ],
+      [
+        1234.5678,
+        2,
+        "1,234.57"
+      ],
+      [
+        1.23e-06,
+        8,
+        "0.00000123"
+      ],
+      [
+        null,
+        2,
+        "Unavailable"
+      ],
+      [
+        null,
+        2,
+        "Unavailable"
+      ],
+      [
+        -1.5,
+        2,
+        "-1.50"
+      ]
+    ],
+    "fmt_tokens": [
+      [
+        0,
+        "0"
+      ],
+      [
+        999,
+        "999"
+      ],
+      [
+        1000,
+        "1.0K"
+      ],
+      [
+        12345,
+        "12.3K"
+      ],
+      [
+        340500000,
+        "340.5M"
+      ],
+      [
+        1200000000,
+        "1.2B"
+      ],
+      [
+        2500000000000.0,
+        "2.5T"
+      ],
+      [
+        -1500,
+        "-1.5K"
+      ],
+      [
+        null,
+        "Unavailable"
+      ]
+    ]
+  }
+}

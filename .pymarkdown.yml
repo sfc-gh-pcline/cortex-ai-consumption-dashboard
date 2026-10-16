@@ -1,0 +1,12 @@
+mode:
+  strict-config: true
+
+plugins:
+  md013:
+    enabled: false
+  md024:
+    siblings_only: true
+  md051:
+    enabled: false
+  md033:
+    allowed_elements: "br,img,details,summary,sup,sub"
